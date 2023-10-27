@@ -1,12 +1,7 @@
 .navbar {
     background-color: #5f0f40;
-    position: sticky;
     border-bottom: 1px solid #fb8b24;
     box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.3);
-    top: 0;
-    z-index: 10;
-    overflow: hidden;
-    padding: 0 !important;
     .navbar-toggler, .navbar-toggler-icon {
         color: #fefae0;
         background-color: #fb8b24; 
@@ -22,9 +17,6 @@
             justify-content: space-around;
             color: #fefae0 !important;
             font-size: 1.2rem;
-            * {
-                padding: 5px 0;
-            };
         }
         .active {
             font-weight: bold;
