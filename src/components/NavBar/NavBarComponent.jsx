@@ -1,4 +1,5 @@
 import "./NavBarComponent.scss"
+import LogoComponent from "../Logo/LogoComponent"
 
 const NavBarComponent = () => {
     return (
