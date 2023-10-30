@@ -10,7 +10,7 @@ function App() {
     return (
         <>
             <NavBarComponent />
-            <ItemListContainerComponent />
+            <ItemListContainerComponent greeting="¡Bievenido a Libelulis!"/>
         </>
     )
 }

@@ -1,12 +1,12 @@
 import "./ItemListContainerComponent.scss"
+import Container from 'react-bootstrap/Container';
 
-const ItemListContainerComponent = () => {
+const ItemListContainerComponent = ({greeting}) => {
     return (
         <>
-            <li>PRODUCTO</li>
-            <li>PRODUCTO</li>
-            <li>PRODUCTO</li>
-            <li>PRODUCTO</li>
+            <Container fluid className="greeting rounded">
+                {greeting}
+            </Container>
         </>
     )
 }

@@ -19,11 +19,11 @@ const NavBarComponent = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link className="nav-item active mx-2" href="#home">Inicio</Nav.Link>
-                            <Nav.Link className="nav-item mx-2" href="#link">Tienda</Nav.Link>
-                            <Nav.Link className="nav-item mx-2" href="#nosotros">Nosotros</Nav.Link>
-                            <Nav.Link className="nav-item mx-2" href="#contacto">Contacto</Nav.Link>
-                            <Nav.Link className="nav-item mx-2 my-auto" href="#carrito">
+                            <Nav.Link className="nav-item active mx-2 rounded" href="#home">Inicio</Nav.Link>
+                            <Nav.Link className="nav-item mx-2 rounded" href="#link">Tienda</Nav.Link>
+                            <Nav.Link className="nav-item mx-2 rounded" href="#nosotros">Nosotros</Nav.Link>
+                            <Nav.Link className="nav-item mx-2 rounded" href="#contacto">Contacto</Nav.Link>
+                            <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
                                 <CartWidgetComponent />
                             </Nav.Link>
                         </Nav>
