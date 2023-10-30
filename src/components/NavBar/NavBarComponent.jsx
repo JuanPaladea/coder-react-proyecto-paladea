@@ -1,38 +1,35 @@
 import "./NavBarComponent.scss"
-import LogoComponent from "../Logo/LogoComponent"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import CartWidgetComponent from "../CartWidget/CartWidgetComponent";
 
 const NavBarComponent = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg pe-5">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#"><img className="logo" src="src\assets\img\logo.png" alt="logo libelulis"/></a>
-                    <div>
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li className="nav-item mx-3 rounded">
-                                <a className="nav-link active" aria-current="page" href="#">
-                                Inicio</a>
-                            </li>
-                            <li className="nav-item mx-3 rounded">
-                                <a className="nav-link" href="./pages/tienda.html">
-                                Tienda</a>
-                            </li>
-                            <li className="nav-item mx-3 rounded">
-                                <a className="nav-link" href="./pages/nosotros.html">
-                                Nosotros</a>
-                            </li>
-                            <li className="nav-item mx-3 rounded">
-                                <a className="nav-link" href="./pages/contacto.html">
-                                Contacto</a>
-                            </li>
-                            <li className="nav-item mx-3 rounded">
-                                <a className="nav-link" href="./pages/talles.html">
-                                Carrito</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <Navbar expand="lg" className="navbar justify-content-end" style={{ width: "100%" }}>
+                <Container fluid className="mx-3">
+                    <Navbar.Brand href="#home">
+                        <img
+                            src="src\assets\img\logo.png"
+                            className="d-inline-block"
+                            alt="React Bootstrap logo"
+                        />    
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link className="nav-item active mx-2" href="#home">Inicio</Nav.Link>
+                            <Nav.Link className="nav-item mx-2" href="#link">Tienda</Nav.Link>
+                            <Nav.Link className="nav-item mx-2" href="#nosotros">Nosotros</Nav.Link>
+                            <Nav.Link className="nav-item mx-2" href="#contacto">Contacto</Nav.Link>
+                            <Nav.Link className="nav-item mx-2 my-auto" href="#carrito">
+                                <CartWidgetComponent />
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </>
     )
 }
