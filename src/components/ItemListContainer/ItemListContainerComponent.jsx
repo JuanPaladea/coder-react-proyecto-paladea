@@ -11,4 +11,4 @@ const ItemListContainerComponent = ({greeting}) => {
     )
 }
 
-export default ItemListContainerComponent
+export default ItemListContainerComponent;
