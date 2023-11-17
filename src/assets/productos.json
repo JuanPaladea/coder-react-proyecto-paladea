@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "nombre": "Remera Blanca", 
+        "precio": 9,
+        "categoria": "remera",
+        "img": ""
+    },
+    {
+        "id": 2,
+        "nombre": "Remera Negra", 
+        "precio": 9,
+        "categoria": "remera",
+        "img": ""
+    },
+    {
+        "id": 3,
+        "nombre" : "Remera Calentamiento",
+        "precio": 11,
+        "categoria": "remera",
+        "img": ""
+    },
+    {
+        "id": 4,
+        "nombre" : "Remera Cometa",
+        "precio": 11,
+        "categoria": "remera",
+        "img": ""
+    },
+    {
+        "id": 5,
+        "nombre" : "Remera Recicla",
+        "precio": 10,
+        "categoria": "remera",
+        "img": ""
+    },
+    {
+        "id": 6,
+        "nombre" : "Remera Sunwaves",
+        "precio": 12,
+        "categoria": "remera",
+        "img": ""
+    },
+    {
+        "id": 7,
+        "nombre": "Buzo Negro", 
+        "precio": 20,
+        "categoria": "buzo",
+        "img": ""
+    },
+    {
+        "id": 8,
+        "nombre": "Buzo Beige", 
+        "precio": 22,
+        "categoria": "buzo",
+        "img": ""
+    },
+    {
+        "id": 9,
+        "nombre": "Buzo Militar", 
+        "precio": 21,
+        "categoria": "buzo",
+        "img": ""
+    },
+    {
+        "id": 10,
+        "nombre": "Buzo Sunwaves", 
+        "precio": 23,
+        "categoria": "buzo",
+        "img": ""
+    },
+    {
+        "id": 11,
+        "nombre": "Buzo Turquesa", 
+        "precio": 20,
+        "categoria": "buzo",
+        "img": ""
+    },
+    {
+        "id": 12,
+        "nombre": "Buzo Zoo", 
+        "precio": 22,
+        "categoria": "buzo",
+        "img": ""
+    },
+    {
+        "id": 13,
+        "nombre": "Buzo Marrón", 
+        "precio": 20,
+        "categoria": "buzo",
+        "img": ""
+    },
+    {
+        "id": 14,
+        "nombre": "Campera Beige", 
+        "precio": 25,
+        "categoria": "campera",
+        "img": ""
+    },
+    {
+        "id": 15,
+        "nombre": "Campera Bicolor", 
+        "precio": 28,
+        "categoria": "campera",
+        "img": ""
+    },
+    {
+        "id": 16,
+        "nombre": "Campera Dusty", 
+        "precio": 25,
+        "categoria": "campera",
+        "img": ""
+    },
+    {
+        "id": 17,
+        "nombre": "Campera Negra", 
+        "precio": 30,
+        "categoria": "campera",
+        "img": ""
+    }
+]

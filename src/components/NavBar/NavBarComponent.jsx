@@ -22,9 +22,8 @@ const NavBarComponent = () => {
                         <Nav className="ms-auto">
                             {/* <Nav.Link className="nav-item active mx-2 rounded" href="#home">Inicio</Nav.Link> */}
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/">Inicio</Link>
-                            <Nav.Link className="nav-item mx-2 rounded" href="#link">Tienda</Nav.Link>
-                            <Nav.Link className="nav-item mx-2 rounded" href="#nosotros">Nosotros</Nav.Link>
-                            <Nav.Link className="nav-item mx-2 rounded" href="#contacto">Contacto</Nav.Link>
+                            <Link className="nav-item mx-2 my-auto p-2 rounded" to="/tienda">Tienda</Link>
+                            <Link className="nav-item mx-2 my-auto p-2 rounded" to="/contacto">Contacto</Link>
                             <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
                                 <CartWidgetComponent />
                             </Nav.Link>
