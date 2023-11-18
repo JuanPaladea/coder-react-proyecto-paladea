@@ -4,6 +4,7 @@ import { Tienda } from  "../pages/Tienda";
 import { Contacto } from  "../pages/Contacto";
 import Categorias from "../pages/Categorias";
 import NavBarComponent from "../components/NavBar/NavBarComponent";
+import Item from "../pages/Item";
 
 export const MainRouter = () => {
     return (
@@ -13,6 +14,7 @@ export const MainRouter = () => {
                 <Route path="/" element={<Inicio />}/>
                 <Route path="/tienda" element={<Tienda />}/>
                 <Route path="/category/:categoryId" element={<Categorias />}/>
+                <Route path="/item/:id" element={<Item />} />
                 <Route path="/contacto" element={<Contacto />}/>
             </Routes>
         </BrowserRouter>

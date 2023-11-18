@@ -1,5 +1,9 @@
 import axios from "axios";
 
 export function getProductos() {
-    axios.get("https://dummyjson.com/products")
+    return axios.get("https://dummyjson.com/products")
+}
+
+export function getCategories() {
+    return axios.get("https://dummyjson.com/products/categories");
 }
