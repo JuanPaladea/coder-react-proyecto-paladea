@@ -4,118 +4,118 @@
         "nombre": "Remera Blanca", 
         "precio": 9,
         "categoria": "remera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Remeras/remera-blanca.webp"
     },
     {
         "id": 2,
         "nombre": "Remera Negra", 
         "precio": 9,
         "categoria": "remera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Remeras/remera-negra.webp"
     },
     {
         "id": 3,
         "nombre" : "Remera Calentamiento",
         "precio": 11,
         "categoria": "remera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Remeras/remera-calentamiento.webp"
     },
     {
         "id": 4,
         "nombre" : "Remera Cometa",
         "precio": 11,
         "categoria": "remera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Remeras/remera-cometa.webp"
     },
     {
         "id": 5,
         "nombre" : "Remera Recicla",
         "precio": 10,
         "categoria": "remera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Remeras/remera-recicla.webp"
     },
     {
         "id": 6,
         "nombre" : "Remera Sunwaves",
         "precio": 12,
         "categoria": "remera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Remeras/remera-sunwaves.webp"
     },
     {
         "id": 7,
         "nombre": "Buzo Negro", 
         "precio": 20,
         "categoria": "buzo",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Buzos/buzo-negro.webp"
     },
     {
         "id": 8,
         "nombre": "Buzo Beige", 
         "precio": 22,
         "categoria": "buzo",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Buzos/buzo-beige.webp"
     },
     {
         "id": 9,
         "nombre": "Buzo Militar", 
         "precio": 21,
         "categoria": "buzo",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Buzos/buzo-militar.webp"
     },
     {
         "id": 10,
         "nombre": "Buzo Sunwaves", 
         "precio": 23,
         "categoria": "buzo",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Buzos/buzo-sunwaves.webp"
     },
     {
         "id": 11,
         "nombre": "Buzo Turquesa", 
         "precio": 20,
         "categoria": "buzo",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Buzos/buzo-turquesa.webp"
     },
     {
         "id": 12,
         "nombre": "Buzo Zoo", 
         "precio": 22,
         "categoria": "buzo",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Buzos/buzo-zoo.webp"
     },
     {
         "id": 13,
         "nombre": "Buzo Marrón", 
         "precio": 20,
         "categoria": "buzo",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Buzos/buzo-marron.webp"
     },
     {
         "id": 14,
         "nombre": "Campera Beige", 
         "precio": 25,
         "categoria": "campera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Camperas/campera-beige.webp"
     },
     {
         "id": 15,
         "nombre": "Campera Bicolor", 
         "precio": 28,
         "categoria": "campera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Camperas/campera-bicolor.webp"
     },
     {
         "id": 16,
         "nombre": "Campera Dusty", 
         "precio": 25,
         "categoria": "campera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Camperas/campera-dusty.webp"
     },
     {
         "id": 17,
         "nombre": "Campera Negra", 
         "precio": 30,
         "categoria": "campera",
-        "img": ""
+        "img": "https://github.com/JuanPaladea/coder-react-proyecto-paladea/blob/main/src/assets/img/Camperas/campera-negra.webp"
     }
 ]

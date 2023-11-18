@@ -1,7 +1,9 @@
+import HeaderComponent from "../components/Header/HeaderComponent"
+
 export const Inicio = () => {
     return (
         <div>
-            INICIO
+            <HeaderComponent/>
         </div>
     )
 }

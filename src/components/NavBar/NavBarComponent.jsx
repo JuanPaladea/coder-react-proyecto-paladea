@@ -8,14 +8,16 @@ import { Link } from 'react-router-dom'
 const NavBarComponent = () => {
     return (
         <>
-            <Navbar expand="lg" className="navbar justify-content-end" style={{ width: "100%" }}>
+            <Navbar expand="lg" className="navbar justify-content-end">
                 <Container fluid className="mx-3">
-                    <Navbar.Brand href="#home">
-                        <img
-                            src="src\assets\img\logo.png"
-                            className="d-inline-block"
-                            alt="React Bootstrap logo"
-                        />    
+                    <Navbar.Brand>
+                        <Link to="/">
+                            <img
+                                src="src\assets\img\logo.png"
+                                className="d-inline-block"
+                                alt="logo Libelulis"
+                            />
+                        </Link>    
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
