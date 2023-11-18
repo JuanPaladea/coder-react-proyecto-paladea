@@ -19,7 +19,7 @@ const NavBarComponent = () => {
                         <Link to="/">
                             <img
                                 src="src\assets\img\logo.png"
-                                className="d-inline-block"
+                                className="d-inline-block logo-libelulis"
                                 alt="logo Libelulis"
                             />
                         </Link>    
