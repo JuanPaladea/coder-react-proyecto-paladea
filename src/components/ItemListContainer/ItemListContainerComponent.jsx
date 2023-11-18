@@ -15,7 +15,7 @@ const ItemListContainerComponent = ({producto}) => {
                             <div className="col-6 col-lg-4" key={producto.id}>
                                 <Link to={`/item/${producto.id}`}><img src={producto.images[1]} alt={producto.title} /></Link>
                                 <p>{producto.title}</p>
-                                <p>{producto.price * dolar}</p>
+                                <p>Precio: ${producto.price * dolar}</p>
                             </div>
                         )
                     })}
