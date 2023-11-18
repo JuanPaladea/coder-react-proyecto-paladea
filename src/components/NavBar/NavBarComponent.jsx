@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidgetComponent from "../CartWidget/CartWidgetComponent";
 import { Link } from 'react-router-dom'
+import { NavDropdown } from "react-bootstrap";
 
 const NavBarComponent = () => {
     return (
@@ -25,6 +26,23 @@ const NavBarComponent = () => {
                             {/* <Nav.Link className="nav-item active mx-2 rounded" href="#home">Inicio</Nav.Link> */}
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/">Inicio</Link>
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/tienda">Tienda</Link>
+                            <NavDropdown title="Categorías" id="basic-nav-dropdown" className="nav-item mx-2 my-auto p-2 rounded" >
+                                <NavDropdown.Item>
+                                    <Link to="category/buzos">
+                                        <span className="categoria">Buzos</span>
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link to="category/remeras">
+                                        <span className="categoria">Remeras</span>
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link to="category/camperas">
+                                        <span className="categoria">Camperas</span>
+                                    </Link>
+                                </NavDropdown.Item>
+                            </NavDropdown>
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/contacto">Contacto</Link>
                             <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
                                 <CartWidgetComponent />

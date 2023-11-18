@@ -4,6 +4,7 @@ import useDolar from "../../hooks/useDolar";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ItemListContainerComponent = () => {
     const {dolar} = useDolar()    
@@ -22,7 +23,7 @@ const ItemListContainerComponent = () => {
                     {producto.map((producto) => {
                         return (
                             <div className="col-6 col-lg-4" key={producto.id}>
-                                <img src={producto.images[1]} alt={producto.title} />
+                                <Link><img src={producto.images[1]} alt={producto.title} /></Link>
                                 <p>{producto.title}</p>
                                 <p>{producto.price * dolar}</p>
                             </div>
