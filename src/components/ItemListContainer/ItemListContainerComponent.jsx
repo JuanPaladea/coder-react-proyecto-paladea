@@ -2,6 +2,7 @@ import "./ItemListContainerComponent.scss"
 import Container from 'react-bootstrap/Container';
 import useDolar from "../../hooks/useDolar";
 import { Link } from "react-router-dom";
+import ItemCountComponent from "../ItemCount/ItemCountComponent";
 
 const ItemListContainerComponent = ({producto}) => {
     const {dolar} = useDolar();
@@ -16,6 +17,7 @@ const ItemListContainerComponent = ({producto}) => {
                                 <Link to={`/item/${producto.id}`}><img src={producto.images[1]} alt={producto.title} /></Link>
                                 <p>{producto.title}</p>
                                 <p>Precio: ${producto.price * dolar}</p>
+                                <ItemCountComponent />
                             </div>
                         )
                     })}

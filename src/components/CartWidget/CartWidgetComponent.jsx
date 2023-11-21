@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 const CartWidgetComponent = () => {
-    const [carrito, setCarrito] = useState(0)
+    const {state, useState} = useContext(CartContext)
 
     return (
         <>
-            <FontAwesomeIcon className="my-auto" icon="fa-solid fa-cart-shopping" style={{color: "#ffffff",}} /> <span className=''>{carrito}</span>
+            <FontAwesomeIcon className="my-auto" icon="fa-solid fa-cart-shopping" style={{color: "#ffffff",}} /> <span className=''>{state}</span>
         </>
     )
 }

@@ -4,12 +4,15 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCartShopping} from '@fortawesome/free-solid-svg-icons'
 library.add(fab, faCartShopping, )
 import { MainRouter } from './router';
+import { CartProvider } from './context/CartContext';
 
 function App() {
     return (
-        <div>  
-            <MainRouter />
-        </div>
+        <CartProvider>
+            <div>
+                <MainRouter />
+            </div>
+        </CartProvider>
     )
 }
 
