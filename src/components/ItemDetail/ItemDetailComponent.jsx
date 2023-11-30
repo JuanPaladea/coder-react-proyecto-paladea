@@ -9,7 +9,7 @@ const ItemDetailComponent = ({producto}) => {
         <Container >
             <div className="row gy-2 text-center tienda-productos my-2">
                 <div className="col-6 col-lg-4" key={producto.id}>
-                    <img src={producto.images} alt={producto.title} />
+                    <img src={producto.img} alt={producto.title} />
                     <p>{producto.title}</p>
                     <p>{producto.description}</p>
                     <p>Precio: ${producto.price * dolar}</p>

@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Inicio } from "../pages/Inicio";
 import { Tienda } from  "../pages/Tienda";
 import { Contacto } from  "../pages/Contacto";
-import Categorias from "../pages/Categorias";
+import { Item } from "../pages/Item";
+import { Categorias } from "../pages/Categorias";
 import NavBarComponent from "../components/NavBar/NavBarComponent";
-import Item from "../pages/Item";
 
 export const MainRouter = () => {
     return (

@@ -1,17 +1,49 @@
 import { useEffect, useState } from "react"
-import axios from "axios"
+import { collection, getDocs, getFirestore, getDoc, doc } from 'firebase/firestore'
 
-function useProductos(category) {
-    const [producto, setProducto] = useState([])
-    const url = category ? `https://dummyjson.com/products/category/${category}` : "https://dummyjson.com/products/";
+export const useProductos = (collectionName) => {
+    const [producto, setProducto] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false)
 
     useEffect(() => {
-        axios
-        .get(url)
-        .then((res) => setProducto(res.data.products))
-        .catch((err) => console.log(err))
-    }, [category])
-    return {producto}
+        const db = getFirestore();
+
+        const productsCollection = collection(db, collectionName)
+        
+        getDocs(productsCollection)
+        .then((snapshot) => {
+            setProducto(snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data(),
+            })))
+        }).catch(() => {
+            setError(true)
+        }).finally(setLoading(false))
+    }, [])
+
+    return {producto, loading, error}
 }
 
-export default useProductos
+export const useProductoUnico = (collectionName, id) => {
+    const [producto, setProducto] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false)
+
+    useEffect(() => {
+        const db = getFirestore();
+
+        const singleProduct = doc(db, collectionName, id)
+        
+        getDoc(singleProduct)
+        .then((snapshot) => {
+            setProducto({id: snapshot.id, ...snapshot.data()})
+        }).catch(() => {
+            setError(true)
+        }).finally(setLoading(false))
+    }, [])
+
+    return {producto, loading, error}
+}
+
+export default {useProductoUnico, useProductos}

@@ -1,13 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ItemListContainerComponent from '../components/ItemListContainer/ItemListContainerComponent'
-import useProductos from '../hooks/useProductos';
+import LoaderComponent from '../components/LoaderComponent/LoaderComponent';
+import { useProductos } from '../hooks/useProductos';
 
 export const Tienda = () => {    
-    const {producto} = useProductos()
+    const {producto, loading, error} = useProductos('products')
 
     return (
         <div>
-            <ItemListContainerComponent producto={producto} />
+            {loading ? (
+                <LoaderComponent />
+            ) : error ? (
+                'hubo un error'
+            ) : (
+                <ItemListContainerComponent producto={producto} />
+            )}
         </div>
     )
 }

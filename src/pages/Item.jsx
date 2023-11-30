@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetailComponent from '../components/ItemDetail/ItemDetailComponent'
-import axios from 'axios'
-import useProductoUnico from '../hooks/useProductoUnico'
+import { useProductoUnico } from '../hooks/useProductos'
 
-const Item = () => {
+export const Item = () => {
     const {id} = useParams()
-    const {producto} = useProductoUnico(id)
+    const {producto} = useProductoUnico('products', id)
 
      return (
         <div>
@@ -14,5 +13,3 @@ const Item = () => {
         </div>
     )
 }
-
-export default Item

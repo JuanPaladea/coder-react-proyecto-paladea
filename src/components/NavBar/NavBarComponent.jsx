@@ -5,12 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import CartWidgetComponent from "../CartWidget/CartWidgetComponent";
 import { Link } from 'react-router-dom'
 import { NavDropdown } from "react-bootstrap";
-import useCategory from "../../hooks/useCategories";
 
 const NavBarComponent = () => {
-
-    const {category} = useCategory()
-
     return (
         <>
             <Navbar expand="lg" className="navbar justify-content-end">
@@ -30,14 +26,14 @@ const NavBarComponent = () => {
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/">Inicio</Link>
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/tienda">Tienda</Link>
                             <NavDropdown title="Categorías" id="basic-nav-dropdown" className="nav-item mx-2 my-auto p-2 rounded" >
-                                {category.map((category, index) => {
+                                {/* {category.map((category, index) => {
                                     return (<NavDropdown.Item key={index}>
                                         <Link
                                          to={`/category/${category}`}>
                                             <span className="categoria">{category}</span>
                                         </Link>
                                     </NavDropdown.Item>
-                                )})}
+                                )})} */}
                             </NavDropdown>
                             <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
                                 <CartWidgetComponent />
