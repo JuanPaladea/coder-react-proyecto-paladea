@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import ItemListContainerComponent from '../components/ItemListContainer/ItemListContainerComponent'
 import useProductos from '../hooks/useProductos';
 
-const Categorias = () => {
+export const Categorias = () => {
     const {categoryId} = useParams()
     const {producto} = useProductos(categoryId)
 
