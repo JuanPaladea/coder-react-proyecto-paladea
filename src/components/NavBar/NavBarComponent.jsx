@@ -26,14 +26,24 @@ const NavBarComponent = () => {
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/">Inicio</Link>
                             <Link className="nav-item mx-2 my-auto p-2 rounded" to="/tienda">Tienda</Link>
                             <NavDropdown title="Categorías" id="basic-nav-dropdown" className="nav-item mx-2 my-auto p-2 rounded" >
-                                {/* {category.map((category, index) => {
-                                    return (<NavDropdown.Item key={index}>
-                                        <Link
-                                         to={`/category/${category}`}>
-                                            <span className="categoria">{category}</span>
-                                        </Link>
-                                    </NavDropdown.Item>
-                                )})} */}
+                                <NavDropdown.Item>
+                                    <Link
+                                        to={`/category/buzo`}>
+                                        <span className="categoria">Buzo</span>
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link
+                                        to={`/category/campera`}>
+                                        <span className="categoria">Campera</span>
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link
+                                        to={`/category/remera`}>
+                                        <span className="categoria">Remera</span>
+                                    </Link>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
                                 <CartWidgetComponent />
