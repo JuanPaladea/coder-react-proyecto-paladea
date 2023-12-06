@@ -11,12 +11,12 @@ const ItemListContainerComponent = ({producto}) => {
         <>
             <Container >
                 <div className="row gy-2 text-center tienda-productos my-2">
-                    {producto.map((producto) => {
+                    {producto.map((product) => {
                         return (
-                            <div className="col-6 col-lg-4 my-4" key={producto.id}>
-                                <Link to={`/item/${producto.id}`}><img src={producto.img} alt={producto.name} /></Link>
-                                <p>{producto.name}</p>
-                                <p>Precio: ${producto.price * dolar}</p>
+                            <div className="col-6 col-lg-4 my-4" key={product.id}>
+                                <Link to={`/item/${product.id}`}><img src={product.img} alt={product.name} /></Link>
+                                <p>{product.name}</p>
+                                <p>Precio: ${product.price * dolar}</p>
                                 <ItemCountComponent />
                             </div>
                         )
