@@ -1,0 +1,19 @@
+.mapa {
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #5f0f40;
+    border: 1px solid #fb8b24;
+    box-shadow: 0px 0px 10px 5px rgba(95, 15, 64, 0.1);
+    .texto-mapa {
+        flex-direction: row;
+        align-items: inherit;
+        justify-content: space-around;
+        color: white;
+    }
+    iframe {
+        height: 55vh;
+        width: 100%;
+    }
+}

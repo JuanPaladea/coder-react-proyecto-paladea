@@ -5,8 +5,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import CartWidgetComponent from "../CartWidget/CartWidgetComponent";
 import { Link } from 'react-router-dom'
 import { NavDropdown } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressBook, faHouse, faList, faStore } from "@fortawesome/free-solid-svg-icons";
 
 const NavBarComponent = () => {
+
     return (
         <>
             <Navbar expand="lg" className="navbar justify-content-end">
@@ -18,14 +21,14 @@ const NavBarComponent = () => {
                                 className="d-inline-block logo-libelulis"
                                 alt="logo Libelulis"
                             />
-                        </Link>    
+                        </Link>   
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Link className="nav-item mx-2 my-auto p-2 rounded" to="/">Inicio</Link>
-                            <Link className="nav-item mx-2 my-auto p-2 rounded" to="/tienda">Tienda</Link>
-                            <NavDropdown title="Categorías" id="basic-nav-dropdown" className="nav-item mx-2 my-auto p-2 rounded" >
+                            <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/"><FontAwesomeIcon icon={faHouse} /><br />Inicio</Link>
+                            <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/tienda"><FontAwesomeIcon icon={faStore} /><br />Tienda</Link>
+                            <NavDropdown title={<FontAwesomeIcon icon={faList}/>} id="basic-nav-dropdown" className="nav-item mx-2 my-auto p-2 rounded">
                                 <NavDropdown.Item>
                                     <Link
                                         to={`/category/buzo`}>
@@ -45,6 +48,7 @@ const NavBarComponent = () => {
                                     </Link>
                                 </NavDropdown.Item>
                             </NavDropdown>
+                            <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/contacto"><FontAwesomeIcon icon={faAddressBook} /><br />Contacto</Link>
                             <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
                                 <CartWidgetComponent />
                             </Nav.Link>
