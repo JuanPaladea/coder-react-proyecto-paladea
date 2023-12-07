@@ -9,7 +9,7 @@ const ItemListContainerComponent = ({producto}) => {
 
     return (
         <>
-            <Container >
+            <Container>
                 <div className="row gy-2 text-center tienda-productos my-2">
                     {producto.map((product) => {
                         return (

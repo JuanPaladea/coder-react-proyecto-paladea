@@ -13,7 +13,6 @@ const cartReducer = (state, action) => {
             ...state,
             items: [...state.items, action.payload],
             };
-        // Add other cases as needed (e.g., REMOVE_FROM_CART).
         default:
             return state;
     }

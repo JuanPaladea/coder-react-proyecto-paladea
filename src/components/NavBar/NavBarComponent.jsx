@@ -28,7 +28,7 @@ const NavBarComponent = () => {
                         <Nav className="ms-auto">
                             <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/"><FontAwesomeIcon icon={faHouse} /><br />Inicio</Link>
                             <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/tienda"><FontAwesomeIcon icon={faStore} /><br />Tienda</Link>
-                            <NavDropdown title={<FontAwesomeIcon icon={faList}/>} id="basic-nav-dropdown" className="nav-item mx-2 my-auto p-2 rounded">
+                            <NavDropdown title={<div><FontAwesomeIcon icon={faList}/><br/><span className="nav-item">Categorías</span></div>} id="basic-nav-dropdown" className="nav-item  text-center rounded">
                                 <NavDropdown.Item>
                                     <Link
                                         to={`/category/buzo`}>

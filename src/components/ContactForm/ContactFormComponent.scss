@@ -6,12 +6,12 @@
     color: white;
     .enviar-button {
         font-size: 1.2rem;
-        background-color: #fb8b24;
+        background-color: #fb8b24 !important;
         color: white;
         border: none;
         &:hover {
             cursor: pointer;
-            background-color: #e36414;
+            background-color: #e36414 !important;
             transition: background-color 0.5s;
         }
     }
