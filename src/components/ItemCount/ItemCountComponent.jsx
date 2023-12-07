@@ -1,34 +1,35 @@
 import React, { useContext, useState } from 'react'
-import { Button } from 'react-bootstrap'
 import { CartContext } from '../../context/CartContext'
 import "./ItemCountComponent.scss"
 
-const ItemCountComponent = () => {
-    const {state, setState} = useContext(CartContext)
-    const [count, setCount] = useState(state)
+const ItemCountComponent = ({producto}) => {
+    const {cart, addToCart} = useContext(CartContext)
+    const [count, setCount] = useState(0)
 
     const handleAdd = () => {
         setCount(count + 1)
     }
 
     const handleDelete = () => {
-        setCount(count - 1)
+        if (count > 0) {
+            setCount(count - 1)
+        }
     }
 
     const handleAddButton = () => {
-        setState(count)
+        addToCart({...producto, quantity: count})
         setCount(0)
     }
 
     return (
         <div>
             <div className='count'>
-                <Button onClick={handleDelete}>-</Button>
-                <p>{count}</p>
-                <Button onClick={handleAdd}>+</Button>
+                <button onClick={handleDelete}>-</button>
+                <h5>{count}</h5>
+                <button onClick={handleAdd}>+</button>
             </div>
             <div className='add'>
-                <Button onClick={handleAddButton}>Agregar al carrito</Button>
+                <button onClick={handleAddButton}><h5>Agregar al carrito</h5></button>
             </div>
         </div>
   )

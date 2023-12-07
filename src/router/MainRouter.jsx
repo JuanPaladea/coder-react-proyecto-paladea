@@ -5,6 +5,7 @@ import { Contacto } from  "../pages/Contacto";
 import { Item } from "../pages/Item";
 import { Categorias } from "../pages/Categorias";
 import NavBarComponent from "../components/NavBar/NavBarComponent";
+import Carrito from "../pages/Carrito";
 
 export const MainRouter = () => {
     return (
@@ -16,6 +17,7 @@ export const MainRouter = () => {
                 <Route path="/category/:categoryId" element={<Categorias />}/>
                 <Route path="/item/:id" element={<Item />} />
                 <Route path="/contacto" element={<Contacto />}/>
+                <Route path="/carrito" element={<Carrito/>} />
             </Routes>
         </BrowserRouter>
     ) 

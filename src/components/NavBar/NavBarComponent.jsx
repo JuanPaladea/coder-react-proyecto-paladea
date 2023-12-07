@@ -49,8 +49,10 @@ const NavBarComponent = () => {
                                 </NavDropdown.Item>
                             </NavDropdown>
                             <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/contacto"><FontAwesomeIcon icon={faAddressBook} /><br />Contacto</Link>
-                            <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
-                                <CartWidgetComponent />
+                            <Nav.Link className="nav-item mx-2 my-auto rounded">
+                                <Link to="/carrito">
+                                    <CartWidgetComponent />
+                                </Link>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

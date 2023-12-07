@@ -11,3 +11,15 @@
         }
     }
 }
+
+button {
+    font-size: 1.5rem;
+    background-color: #5f0f40 !important;
+    color: #fefae0;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: #fb8b24 !important;
+        transition: background-color 0.5s;
+    };
+};

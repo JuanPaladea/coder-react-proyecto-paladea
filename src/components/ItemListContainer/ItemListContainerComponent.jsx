@@ -15,9 +15,9 @@ const ItemListContainerComponent = ({producto}) => {
                         return (
                             <div className="col-6 col-lg-4 my-4" key={product.id}>
                                 <Link to={`/item/${product.id}`}><img src={product.img} alt={product.name} /></Link>
-                                <p>{product.name}</p>
-                                <p>Precio: ${product.price * dolar}</p>
-                                <ItemCountComponent />
+                                <h3>{product.name}</h3>
+                                <h4>Precio: ${product.price * dolar}</h4>
+                                <ItemCountComponent producto={product}/>
                             </div>
                         )
                     })}
