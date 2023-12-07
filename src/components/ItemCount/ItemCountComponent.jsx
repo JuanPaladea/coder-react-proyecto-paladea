@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import "./ItemCountComponent.scss"
+import { toast } from 'react-toastify'
 
 const ItemCountComponent = ({producto}) => {
     const {cart, addToCart} = useContext(CartContext)
     const [count, setCount] = useState(0)
+    const notify = (mensaje) => toast(mensaje)
 
     const handleAdd = () => {
         setCount(count + 1)
@@ -19,6 +21,7 @@ const ItemCountComponent = ({producto}) => {
     const handleAddButton = () => {
         addToCart({...producto, quantity: count})
         setCount(0)
+        notify(`${count} de ${producto.name} agregado al carrito`)
     }
 
     return (
