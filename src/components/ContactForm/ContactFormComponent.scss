@@ -1,0 +1,21 @@
+.form {
+    height: 100%;
+    background-color: #5f0f40;
+    border: 1px solid #fb8b24;
+    box-shadow: 0px 0px 10px 5px rgba(95, 15, 64, 0.1);
+    color: white;
+    .enviar-button {
+        font-size: 1.2rem;
+        background-color: #fb8b24 !important;
+        color: white;
+        border: none;
+        &:hover {
+            cursor: pointer;
+            background-color: #e36414 !important;
+            transition: background-color 0.5s;
+        }
+    }
+    .text-muted {
+        color: white !important;
+    }
+}

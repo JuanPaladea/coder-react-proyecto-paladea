@@ -5,11 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import CartWidgetComponent from "../CartWidget/CartWidgetComponent";
 import { Link } from 'react-router-dom'
 import { NavDropdown } from "react-bootstrap";
-import useCategory from "../../hooks/useCategories";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressBook, faHouse, faList, faStore } from "@fortawesome/free-solid-svg-icons";
 
 const NavBarComponent = () => {
-
-    const {category} = useCategory()
 
     return (
         <>
@@ -22,25 +21,38 @@ const NavBarComponent = () => {
                                 className="d-inline-block logo-libelulis"
                                 alt="logo Libelulis"
                             />
-                        </Link>    
+                        </Link>   
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Link className="nav-item mx-2 my-auto p-2 rounded" to="/">Inicio</Link>
-                            <Link className="nav-item mx-2 my-auto p-2 rounded" to="/tienda">Tienda</Link>
-                            <NavDropdown title="Categorías" id="basic-nav-dropdown" className="nav-item mx-2 my-auto p-2 rounded" >
-                                {category.map((category, index) => {
-                                    return (<NavDropdown.Item key={index}>
-                                        <Link
-                                         to={`/category/${category}`}>
-                                            <span className="categoria">{category}</span>
-                                        </Link>
-                                    </NavDropdown.Item>
-                                )})}
+                            <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/"><FontAwesomeIcon icon={faHouse} /><br />Inicio</Link>
+                            <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/tienda"><FontAwesomeIcon icon={faStore} /><br />Tienda</Link>
+                            <NavDropdown title={<div><FontAwesomeIcon icon={faList}/><br/><span className="nav-item">Categorías</span></div>} id="basic-nav-dropdown" className="nav-item  text-center rounded">
+                                <NavDropdown.Item>
+                                    <Link
+                                        to={`/category/buzo`}>
+                                        <span className="categoria">Buzo</span>
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link
+                                        to={`/category/campera`}>
+                                        <span className="categoria">Campera</span>
+                                    </Link>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link
+                                        to={`/category/remera`}>
+                                        <span className="categoria">Remera</span>
+                                    </Link>
+                                </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link className="nav-item mx-2 my-auto rounded" href="#carrito">
-                                <CartWidgetComponent />
+                            <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/contacto"><FontAwesomeIcon icon={faAddressBook} /><br />Contacto</Link>
+                            <Nav.Link className="nav-item mx-2 my-auto rounded">
+                                <Link to="/carrito">
+                                    <CartWidgetComponent />
+                                </Link>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

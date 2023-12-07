@@ -1,12 +1,20 @@
+import { useContext, useState } from 'react'
+import { CartContext } from '../../context/CartContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
+import { faCartShopping} from '@fortawesome/free-solid-svg-icons'
+import './CartWidgetComponent.scss';
 
 const CartWidgetComponent = () => {
-    const [carrito, setCarrito] = useState(0)
+    const {cart, addToCart} = useContext(CartContext)
+
+    const total = cart.items.reduce((total, item) => total + item.quantity, 0)
 
     return (
         <>
-            <FontAwesomeIcon className="my-auto" icon="fa-solid fa-cart-shopping" style={{color: "#ffffff",}} /> <span className=''>{carrito}</span>
+            <div className='icon text-center'>
+                <FontAwesomeIcon icon={faCartShopping} style={{color: "#fff"}}/>
+                <p className='total'>{total}</p>
+            </div>
         </>
     )
 }

@@ -2,20 +2,22 @@ import "./ItemListContainerComponent.scss"
 import Container from 'react-bootstrap/Container';
 import useDolar from "../../hooks/useDolar";
 import { Link } from "react-router-dom";
+import ItemCountComponent from "../ItemCount/ItemCountComponent";
 
 const ItemListContainerComponent = ({producto}) => {
     const {dolar} = useDolar();
 
     return (
         <>
-            <Container >
+            <Container>
                 <div className="row gy-2 text-center tienda-productos my-2">
-                    {producto.map((producto) => {
+                    {producto.map((product) => {
                         return (
-                            <div className="col-6 col-lg-4" key={producto.id}>
-                                <Link to={`/item/${producto.id}`}><img src={producto.images[1]} alt={producto.title} /></Link>
-                                <p>{producto.title}</p>
-                                <p>Precio: ${producto.price * dolar}</p>
+                            <div className="col-6 col-lg-4 my-4" key={product.id}>
+                                <Link to={`/item/${product.id}`}><img src={product.img} alt={product.name} /></Link>
+                                <h3>{product.name}</h3>
+                                <h4>Precio: ${product.price * dolar}</h4>
+                                <ItemCountComponent producto={product}/>
                             </div>
                         )
                     })}

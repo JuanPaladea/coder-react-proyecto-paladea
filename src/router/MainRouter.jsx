@@ -2,9 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Inicio } from "../pages/Inicio";
 import { Tienda } from  "../pages/Tienda";
 import { Contacto } from  "../pages/Contacto";
-import Categorias from "../pages/Categorias";
+import { Item } from "../pages/Item";
+import { Categorias } from "../pages/Categorias";
 import NavBarComponent from "../components/NavBar/NavBarComponent";
-import Item from "../pages/Item";
+import Carrito from "../pages/Carrito";
 
 export const MainRouter = () => {
     return (
@@ -16,6 +17,7 @@ export const MainRouter = () => {
                 <Route path="/category/:categoryId" element={<Categorias />}/>
                 <Route path="/item/:id" element={<Item />} />
                 <Route path="/contacto" element={<Contacto />}/>
+                <Route path="/carrito" element={<Carrito/>} />
             </Routes>
         </BrowserRouter>
     ) 
