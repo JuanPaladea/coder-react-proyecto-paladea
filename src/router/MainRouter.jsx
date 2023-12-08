@@ -6,6 +6,7 @@ import { Item } from "../pages/Item";
 import { Categorias } from "../pages/Categorias";
 import NavBarComponent from "../components/NavBar/NavBarComponent";
 import Carrito from "../pages/Carrito";
+import FooterComponent from "../components/Footer/FooterComponent";
 
 export const MainRouter = () => {
     return (
@@ -19,6 +20,7 @@ export const MainRouter = () => {
                 <Route path="/contacto" element={<Contacto />}/>
                 <Route path="/carrito" element={<Carrito/>} />
             </Routes>
+            <FooterComponent/>
         </BrowserRouter>
     ) 
 }

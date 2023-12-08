@@ -5,7 +5,7 @@ import { faCartShopping} from '@fortawesome/free-solid-svg-icons'
 import './CartWidgetComponent.scss';
 
 const CartWidgetComponent = () => {
-    const {cart, addToCart} = useContext(CartContext)
+    const {cart} = useContext(CartContext)
 
     const total = cart.items.reduce((total, item) => total + item.quantity, 0)
 
