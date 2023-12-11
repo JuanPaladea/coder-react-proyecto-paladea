@@ -16,7 +16,7 @@ const ItemListContainerComponent = ({producto}) => {
                             <div className="col-6 col-lg-4 my-4" key={product.id}>
                                 <Link to={`/item/${product.id}`}><img src={product.img} alt={product.name} /></Link>
                                 <h3>{product.name}</h3>
-                                <h4>Precio: ${product.price * dolar}</h4>
+                                <h4>Precio: ${(product.price * dolar).toLocaleString()}</h4>
                                 <ItemCountComponent producto={product}/>
                             </div>
                         )

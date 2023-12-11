@@ -5,18 +5,32 @@ import { useCart } from '../../context/CartContext';
 import './CartComponent.scss'
 import CartHeaderComponent from '../CartHeader/CartHeaderComponent';
 import WavesOrangeComponent from '../WavesOrange/WavesOrangeComponent';
+import { toast } from 'react-toastify';
 
 export const CartComponent = () => {
     const {cart, deleteCart, removeFromCart} = useCart();
     const {dolar} = useDolar();
+    const notify = (mensaje) => toast(mensaje)
 
     const handleDeleteButton = () => {
         deleteCart()
+        notify('Carrito eliminado')
     }
 
-    const handleDeleteItem = (itemid) => {
-        removeFromCart(itemid)
+    const handleDeleteItem = (item) => {
+        removeFromCart(item.id)
+        notify(`${item.name} eliminado del carrito`)
     }
+
+    const handleBuyButton = () => {
+        deleteCart()
+        notify('Función a implementar')
+    }
+
+    const totalPrice = cart.items.reduce(
+        (total, item) => total + ((item.price * item.quantity) * dolar),
+        0
+    );
 
     return (
         <div>
@@ -36,14 +50,17 @@ export const CartComponent = () => {
                                     <img className='itemImg' src={item.img}/>
                                     <h4>{item.name}</h4>
                                     <p>Cantidad: {item.quantity}</p>
-                                    <p>Precio: ${item.price * dolar}</p>
-                                    <button onClick={() => handleDeleteItem(item.id)}>Borrar item</button>
+                                    <p>Precio: ${((item.price * dolar) * item.quantity).toLocaleString()}</p>
+                                    <button onClick={() => handleDeleteItem(item)}>Borrar item</button>
                                 </div>
                     )})}
                 </div>
                 <div className='row'>
-                    <button className='mx-auto mb-3 delete'><h3>Comprar carrito</h3></button>
-                    <button className='mx-auto mb-3 delete' onClick={() => handleDeleteButton}><h3>Borrar carrito</h3></button>
+                    <h3 className='text-center mb-3'>TOTAL: ${totalPrice.toLocaleString()}</h3>
+                </div>
+                <div className='row'>
+                    <button className='mx-auto mb-3 delete' onClick={handleDeleteButton}><h3>Borrar carrito</h3></button>
+                    <button className='mx-auto mb-3 delete' onClick={handleBuyButton}><h3>Comprar carrito</h3></button>
                 </div>
             </Container>
             )}

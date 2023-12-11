@@ -19,9 +19,13 @@ const ItemCountComponent = ({producto}) => {
     }
 
     const handleAddButton = () => {
-        addToCart({...producto, quantity: count})
-        setCount(0)
-        notify(`${count} de ${producto.name} agregado al carrito`)
+        if (count > 0) {
+            addToCart({...producto, quantity: count})
+            setCount(0)
+            notify(`${count} de ${producto.name} agregado al carrito`)
+        } else {
+            notify('Cantidad inválida')
+        }
     }
 
     return (

@@ -10,8 +10,17 @@ const cartReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
             return {
-            ...state,
-            items: [...state.items, action.payload],
+                ...state,
+                items: [...state.items, action.payload],
+                };
+        case 'UPDATE_QUANTITY':
+            return {
+                ...state,
+                items: state.items.map((item) =>
+                item.id === action.payload.itemId
+                    ? { ...item, quantity: action.payload.newQuantity }
+                    : item
+                ),
             };
         case 'REMOVE_FROM_CART':
             return {
@@ -32,8 +41,17 @@ export const CartProvider = ({children}) => {
     const [cart, dispatch] = useReducer(cartReducer, { items: [] });
 
     const addToCart = (item) => {
-        dispatch({ type: 'ADD_TO_CART', payload: item });
-    };
+        const existingItem = cart.items.find((existingItem) => existingItem.id === item.id)
+
+        if (existingItem) {
+            dispatch({
+            type: 'UPDATE_QUANTITY',
+            payload: { itemId: item.id, newQuantity: existingItem.quantity + item.quantity },
+        })
+        } else (
+            dispatch({ type: 'ADD_TO_CART', payload: item })
+        )
+    }
 
     const removeFromCart = (itemId) => {
         dispatch({ type: 'REMOVE_FROM_CART', payload: itemId });
