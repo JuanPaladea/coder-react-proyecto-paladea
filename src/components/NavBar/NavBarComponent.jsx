@@ -17,7 +17,7 @@ const NavBarComponent = () => {
                     <Navbar.Brand>
                         <Link to="/">
                             <img
-                                src="src\assets\img\logo.png"
+                                src="https://raw.githubusercontent.com/JuanPaladea/coder-react-proyecto-paladea/main/src/assets/img/logo.png"
                                 className="d-inline-block logo-libelulis"
                                 alt="logo Libelulis"
                             />

@@ -9,7 +9,7 @@ const FooterComponent = () => {
             <Container fluid className='footer'>
                 <div className='row'>
                     <img
-                        src="src\assets\img\logo.png"
+                        src="https://raw.githubusercontent.com/JuanPaladea/coder-react-proyecto-paladea/main/src/assets/img/logo.png"
                         className="d-inline-block logo-libelulis mx-auto my-3"
                         alt="logo Libelulis"
                         />
