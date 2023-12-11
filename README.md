@@ -2,6 +2,10 @@
 
 E-commerce de un posible emprendimiento de un familiar de venta de indumentaria
 
+## Live version
+
+https://libelulis-react.netlify.app/
+
 ## Dependencias utilizadas
 
 - fontawesome
