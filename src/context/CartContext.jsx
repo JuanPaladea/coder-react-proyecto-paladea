@@ -39,6 +39,12 @@ const cartReducer = (state, action) => {
 
 export const CartProvider = ({children}) => {
     const [cart, dispatch] = useReducer(cartReducer, { items: [] });
+    const [isCartVisible, setCartVisibility] = useState(false)
+    console.log(isCartVisible)
+
+    const toggleCartVisibility = () => {
+        setCartVisibility(!isCartVisible)
+    }
 
     const addToCart = (item) => {
         const existingItem = cart.items.find((existingItem) => existingItem.id === item.id)
@@ -62,7 +68,7 @@ export const CartProvider = ({children}) => {
     };
 
     return (
-        <CartContext.Provider value={{cart, addToCart, removeFromCart, deleteCart}}>
+        <CartContext.Provider value={{cart, isCartVisible, addToCart, removeFromCart, deleteCart, toggleCartVisibility}}>
             {children}
         </CartContext.Provider>
     )

@@ -6,6 +6,7 @@
 
 .item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -18,3 +19,25 @@
 p {
     margin: 0;
 }
+
+.cart-container {
+    position: fixed;
+    top: 120px;
+    right: -20%;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 5;
+}
+  
+.cart-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+  
+.cart-visible {
+    right: 0;
+}
+  
