@@ -40,7 +40,6 @@ const cartReducer = (state, action) => {
 export const CartProvider = ({children}) => {
     const [cart, dispatch] = useReducer(cartReducer, { items: [] });
     const [isCartVisible, setCartVisibility] = useState(false)
-    console.log(isCartVisible)
 
     const toggleCartVisibility = () => {
         setCartVisibility(!isCartVisible)
