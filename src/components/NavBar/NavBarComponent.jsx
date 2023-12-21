@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressBook, faHouse, faList, faStore } from "@fortawesome/free-solid-svg-icons";
+import LoginWidgetComponent from "../LoginWidget/LoginWidgetComponent";
 
 const NavBarComponent = () => {
 
@@ -50,7 +51,10 @@ const NavBarComponent = () => {
                             </NavDropdown>
                             <Link className="nav-item mx-2 my-auto p-2 rounded text-center" to="/contacto"><FontAwesomeIcon icon={faAddressBook} /><br />Contacto</Link>
                             <Nav.Link className="nav-item mx-2 my-auto rounded">
-                                    <CartWidgetComponent />
+                                <CartWidgetComponent />
+                            </Nav.Link>
+                            <Nav.Link className="nav-item mx-2 my-auto rounded">
+                                <LoginWidgetComponent />
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
