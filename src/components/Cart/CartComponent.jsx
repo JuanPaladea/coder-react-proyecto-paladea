@@ -31,7 +31,10 @@ export const CartComponent = () => {
     );
 
     return (
-        <div className={`cart-container ${isCartVisible ? 'cart-visible' : ''}`}>
+        <div className={`cart-container ${isCartVisible ? 'cart-visible' : ''} carrito`}>
+            <div className='cart-header text-center'>
+                CARRITO
+            </div>
             <div className='cart-content'>
                 {cart.items.length === 0 ?
                 (
