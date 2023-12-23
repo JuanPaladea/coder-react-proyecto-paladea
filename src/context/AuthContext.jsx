@@ -11,6 +11,12 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const auth = getAuth();
 
+    const [isLoginVisible, setLoginVisibility] = useState(false)
+
+    const toggleLoginVisibility = () => {
+        setLoginVisibility(!isLoginVisible)
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user);
@@ -86,7 +92,9 @@ export const AuthProvider = ({ children }) => {
         signInWithGoogle,
         signOutUser,
         createUser,
-        loginUser
+        loginUser,
+        toggleLoginVisibility,
+        isLoginVisible,
     }
 
     return (

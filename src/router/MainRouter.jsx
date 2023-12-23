@@ -7,12 +7,14 @@ import { Categorias } from "../pages/Categorias";
 import NavBarComponent from "../components/NavBar/NavBarComponent";
 import FooterComponent from "../components/Footer/FooterComponent";
 import CartComponent from "../components/Cart/CartComponent";
+import LoginComponent from "../components/Login/LoginComponent";
 
 export const MainRouter = () => {
     return (
         <BrowserRouter>
             <NavBarComponent />
             <CartComponent />
+            <LoginComponent/>
             <Routes>
                 <Route path="/" element={<Inicio />}/>
                 <Route path="/tienda" element={<Tienda />}/>
