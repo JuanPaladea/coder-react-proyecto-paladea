@@ -6,12 +6,13 @@ import { useAuth } from '../../context/AuthContext'
 const LoginWidgetComponent = () => {
     const {user} = useAuth()
     console.log(user)
+
     return (
         <div className='icon text-center'>    
             {user ? (
                 <div>
                     <FontAwesomeIcon icon={faUser} style={{color: "#fff"}}/>
-                    <p>{user.displayName}</p>
+                    <p>{user.email}</p>
                 </div>
             ) : 
             (

@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 const AuthContext = createContext();
 
@@ -17,6 +17,36 @@ export const AuthProvider = ({ children }) => {
         });
         return () => unsubscribe();
     }, [auth]);
+
+    const createUser = async (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            setUser(user)
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            console.log(error)
+        });
+    }
+
+    const loginUser = async (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            setUser(user)
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
+    }
 
     const signInWithGoogle = async () => {
         const provider = new GoogleAuthProvider();
@@ -54,7 +84,9 @@ export const AuthProvider = ({ children }) => {
     const value = {
         user,
         signInWithGoogle,
-        signOutUser
+        signOutUser,
+        createUser,
+        loginUser
     }
 
     return (
