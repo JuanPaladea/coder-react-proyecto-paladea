@@ -32,13 +32,13 @@ const LoginComponent = () => {
     (
         user ? 
         (
-            <div className='login-container'>
+            <div>
                 <button className='mx-2'>{user.email}</button>
                 <button onClick={handleLogOut}>Logout</button>
             </div>
         ) : 
         (   
-            <div className="col-lg-6 login-container">
+            <div className="col-lg-6">
                 <Form className="form p-4">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label><FontAwesomeIcon icon={faEnvelope} /> Email</Form.Label>

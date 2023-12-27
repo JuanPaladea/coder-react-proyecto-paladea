@@ -15,7 +15,6 @@ export const Contacto = () => {
                 <div className="row gy-3 py-4">
                     <ContactMapComponent />
                     <ContactFormComponent />
-                    <LoginComponent/>
                 </div>
             </Container>
         </div>
